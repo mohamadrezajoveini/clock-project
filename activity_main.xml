@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#000000"
+    tools:context="com.clock_digital.tamrinclockdigital.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:fontFamily="@font/digital7"
+        android:textSize="25dp"
+        android:layout_marginRight="40dp"
+        android:textColor="#0099FF"
+        android:text="PM" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segment7"
+            android:layout_marginLeft="75dp"
+            android:textSize="50dp"
+            android:textColor="#00CCFF"
+            android:paddingRight="3dp"
+            android:text="05" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/digital7"
+            android:textSize="50dp"
+            android:textColor="#00CCFF"
+            android:paddingRight="4dp"
+            android:text=":" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segment7"
+            android:textSize="50dp"
+            android:textColor="#00CCFF"
+            android:paddingRight="4dp"
+            android:text="52" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/digital7"
+            android:textSize="50dp"
+            android:textColor="#00CCFF"
+            android:paddingRight="4dp"
+            android:text=":" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segment7"
+            android:textSize="50dp"
+            android:textColor="#00CCFF"
+            android:text="03" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:fontFamily="@font/digital7"
+            android:textColor="#0099FF"
+            android:text="MON" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/digital7"
+            android:textColor="#0099FF"
+            android:text="TUE" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/digital7"
+            android:layout_marginLeft="8dp"
+            android:textColor="#0099FF"
+            android:text="WEO" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/digital7"
+            android:layout_marginLeft="8dp"
+            android:textColor="#0099FF"
+            android:text="THU" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/digital7"
+            android:layout_marginLeft="8dp"
+            android:textColor="#0099FF"
+            android:text="FRI" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/digital7"
+            android:layout_marginLeft="8dp"
+            android:textColor="#0099FF"
+            android:text="SAT" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/digital7"
+            android:textColor="#0099FF"
+            android:text="SUN"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+
+
