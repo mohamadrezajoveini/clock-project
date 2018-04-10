@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.os.Handler;
 import android.widget.TextView;
 
 
@@ -16,7 +15,9 @@ import java.util.Date;
 import static android.media.MediaPlayer.create;
 
 public class MainActivity extends AppCompatActivity{
+    private MediaPlayer player ;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -30,7 +31,8 @@ public class MainActivity extends AppCompatActivity{
         final int s=d.getSeconds();
         final int h_h=h-12;
         int M = 0;
-        int S=0;
+
+
 
         final TextView h1=(TextView)findViewById(R.id.H);
         final TextView m1=(TextView)findViewById(R.id.M);
@@ -92,6 +94,8 @@ public class MainActivity extends AppCompatActivity{
                 if(h>12)
                     Am_Pm.setText("PM");
                 h1.setText(String.valueOf(h));
+                m1.setText(String.valueOf(m));
+                s1.setText(String.valueOf(s));
                 clock.start();
                 if (h <= 12) {
                     switch (h) {
@@ -439,7 +443,6 @@ public class MainActivity extends AppCompatActivity{
                             break;
                     }
                 }
-                m1.setText(String.valueOf(m));
 
                 switch (m) {
                     case 1:
@@ -1093,7 +1096,7 @@ public class MainActivity extends AppCompatActivity{
                         break;
 
                 }
-                  MediaPlayer player=null ;
+
                 if(m>20&&m<30)
                 {
                     player=mp20_0;}
@@ -1235,7 +1238,6 @@ public class MainActivity extends AppCompatActivity{
                         });
                         break;
                 }
-                s1.setText(String.valueOf(s));
                 if(h==0 && m==0)
                     clock.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
