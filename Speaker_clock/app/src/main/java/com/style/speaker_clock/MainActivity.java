@@ -1,10 +1,13 @@
 package com.style.speaker_clock;
 
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 
@@ -15,7 +18,12 @@ import java.util.Date;
 import static android.media.MediaPlayer.create;
 
 public class MainActivity extends AppCompatActivity{
-    private MediaPlayer player ;
+    private SharedPreferences sp;
+    private MediaPlayer player=null ;
+    private int selectedid;
+
+
+
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +39,7 @@ public class MainActivity extends AppCompatActivity{
         final int s=d.getSeconds();
         final int h_h=h-12;
         int M = 0;
-
+       sp.getInt("selectedid",selectedid);
 
 
         final TextView h1=(TextView)findViewById(R.id.H);
@@ -39,7 +47,6 @@ public class MainActivity extends AppCompatActivity{
         final TextView s1=(TextView)findViewById(R.id.second);
         final TextView Am_Pm =(TextView)findViewById(R.id.AM_PM) ;
         button=(Button)findViewById(R.id.button);
-        final MediaPlayer alk=create(this, R.raw.shirazi);
         final MediaPlayer mp1= create(this, R.raw.one);
         final MediaPlayer mp2= create(this, R.raw.two);
         final MediaPlayer mp3= create(this, R.raw.three);
@@ -71,6 +78,12 @@ public class MainActivity extends AppCompatActivity{
         final MediaPlayer morning= create(this, R.raw.morning);
         final MediaPlayer minute= create(this, R.raw.minute);
         final MediaPlayer o= create(this, R.raw.o);
+        final RadioGroup format_clock=(RadioGroup)findViewById(R.id.format_clock);
+        final RadioButton davazdah=(RadioButton)findViewById(R.id.davazdah);
+        final RadioButton bistochar=(RadioButton)findViewById(R.id.bistochar);
+
+
+
 
 
         for(int i=20;i<m;i+=10)
@@ -87,15 +100,43 @@ public class MainActivity extends AppCompatActivity{
 
         final int M_M=M;
 
+
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
+
                 if(h<12)
                     Am_Pm.setText("AM");
-                if(h>12)
+                if(h>=12)
                     Am_Pm.setText("PM");
-                h1.setText(String.valueOf(h));
-                m1.setText(String.valueOf(m));
-                s1.setText(String.valueOf(s));
+
+
+                selectedid=format_clock.getCheckedRadioButtonId();
+
+                if(selectedid==R.id.davazdah)
+                {
+                    if(h<10)
+                        h1.setText("0"+String.valueOf(h));
+                    else if(h>10&& h<=12)
+                        h1.setText(String.valueOf(h));
+                    else if(h==0)
+                        h1.setText(String.valueOf(12));
+                    else if(h_h<10 && h_h>0)
+                        h1.setText("0"+String.valueOf(h_h));
+                    else if(h_h>10)
+                        h1.setText(String.valueOf(h_h));
+                }
+                else if(selectedid==R.id.bistochar)
+                    h1.setText(String.valueOf(h));
+
+                if(m<10)
+                    m1.setText("0" + String.valueOf(m));
+                else if(m>10)
+                    m1.setText(String.valueOf(m));
+                if(s<10)
+                    s1.setText("0" + String.valueOf(s));
+                else if(s>10)
+                    s1.setText(String.valueOf(h));
                 clock.start();
                 if (h <= 12) {
                     switch (h) {
@@ -1261,6 +1302,10 @@ public class MainActivity extends AppCompatActivity{
 
 
     }
-
+    protected void onStop(){
+        super.onStop();
+        sp=getSharedPreferences("Mypref",MODE_PRIVATE);
+        sp.edit().putInt("format",selectedid).apply();
+    }
 
 }
