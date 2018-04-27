@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.style.speaker_clock.MainActivity"
+    tools:context="com.style.myapplication.MainActivity"
     android:background="#000"
     >
 
@@ -192,25 +192,25 @@
         />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/hour_show_and_expression"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tue"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="41dp"
         android:text="show clock"
-        android:textSize="@d"/>
+        />
     <RadioGroup
         android:id="@+id/format_clock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button"
+        android:layout_below="@id/hour_show_and_expression"
         android:layout_marginLeft="142dp"
         android:layout_marginTop="30dp"
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/davazdah"
+            android:id="@+id/twelve"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -218,7 +218,7 @@
             android:textColor="#FFF" />
 
         <RadioButton
-            android:id="@+id/bistochar"
+            android:id="@+id/twenty_four"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
@@ -227,6 +227,14 @@
 
     </RadioGroup>
 
+    <Button
+        android:id="@+id/select_speaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/format_clock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="type_voice" />
 
 
 </RelativeLayout>
