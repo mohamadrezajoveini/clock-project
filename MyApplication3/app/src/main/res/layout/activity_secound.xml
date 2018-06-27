@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.style.myapplication.SecoundActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/AppTheme"
+        android:background="#55b4ce"
+        app:title="setting"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="please select voice"
+        android:id="@+id/vice"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar2"
+        android:textColor="#000"/>
+    <RadioGroup
+
+        android:orientation="horizontal"
+        android:id="@+id/selecte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vice"
+
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/defult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="defult"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/voice_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My"
+            />
+
+    </RadioGroup>
+</RelativeLayout>

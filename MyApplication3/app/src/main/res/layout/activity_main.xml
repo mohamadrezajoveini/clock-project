@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.style.myapplication.MainActivity"
+    android:background="#000"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tol"
+        android:background="#55b4ce"
+        app:title="speaker_clock">
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_below="@+id/tol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/digital7"
+        android:textSize="30dp"
+        android:layout_marginRight="7dp"
+        android:textColor="#0099FF"
+        android:id="@+id/AM_PM"
+        android:layout_alignEnd="@id/second"
+        android:layout_alignRight="@id/second"
+        android:layout_marginTop="10dp"
+        android:text=" " />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segment7"
+        android:layout_marginLeft="80dp"
+        android:textSize="60dp"
+        android:textColor="#00CCFF"
+        android:paddingRight="3dp"
+        android:layout_below="@id/AM_PM"
+        android:text="  "
+        android:id="@+id/H"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/digital7"
+        android:textSize="60dp"
+        android:textColor="#00CCFF"
+        android:paddingRight="4dp"
+        android:layout_below="@id/AM_PM"
+        android:layout_toRightOf="@id/H"
+        android:text="."
+        android:id="@+id/noghte1" />
+
+    <TextView
+        android:id="@+id/noghte2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/H"
+        android:layout_toRightOf="@+id/H"
+        android:fontFamily="@font/digital7"
+        android:text="."
+        android:layout_below="@+id/tol"
+        android:textColor="#00CCFF"
+        android:textSize="60dp"
+        android:layout_marginBottom="25dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segment7"
+        android:textSize="60dp"
+        android:textColor="#00CCFF"
+        android:paddingRight="3dp"
+        android:layout_below="@id/AM_PM"
+        android:text="  "
+        android:layout_toRightOf="@id/noghte2"
+        android:id="@+id/M"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noghte3"
+        android:layout_toEndOf="@+id/M"
+        android:layout_toRightOf="@+id/M"
+        android:fontFamily="@font/digital7"
+        android:text="."
+        android:textColor="#00CCFF"
+        android:textSize="60dp"
+        android:layout_below="@+id/tol"
+        android:layout_marginBottom="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noghte4"
+        android:fontFamily="@font/digital7"
+        android:textSize="60dp"
+        android:textColor="#00CCFF"
+        android:paddingRight="4dp"
+        android:layout_below="@id/AM_PM"
+        android:layout_toRightOf="@id/M"
+        android:text="."/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segment7"
+        android:textSize="60dp"
+        android:textColor="#00CCFF"
+        android:layout_below="@id/AM_PM"
+        android:text="  "
+        android:layout_toRightOf="@id/noghte4"
+        android:id="@+id/second"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:textSize="17dp"
+        android:fontFamily="@font/digital7"
+        android:textColor="#0099FF"
+        android:id="@+id/mon"
+        android:layout_below="@id/H"
+        android:text="MON" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/digital7"
+        android:textColor="#0099FF"
+        android:layout_below="@id/H"
+        android:id="@+id/tue"
+        android:layout_toRightOf="@id/mon"
+        android:textSize="17dp"
+
+        android:text="TUE" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/digital7"
+        android:layout_marginLeft="8dp"
+        android:textColor="#0099FF"
+        android:layout_below="@id/H"
+        android:textSize="17dp"
+
+        android:id="@+id/weo"
+        android:layout_toRightOf="@id/tue"
+        android:text="WEO" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/digital7"
+        android:layout_marginLeft="8dp"
+        android:textColor="#0099FF"
+        android:layout_below="@id/H"
+        android:id="@+id/thu"
+        android:textSize="17dp"
+        android:layout_toRightOf="@id/weo"
+        android:text="THU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/digital7"
+        android:layout_marginLeft="8dp"
+        android:textColor="#0099FF"
+        android:layout_below="@id/H"
+        android:id="@+id/fri"
+        android:textSize="17dp"
+
+        android:layout_toRightOf="@id/thu"
+        android:text="FRI" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/digital7"
+        android:layout_marginLeft="8dp"
+        android:textColor="#0099FF"
+        android:layout_below="@id/H"
+        android:textSize="17dp"
+
+        android:id="@+id/sat"
+        android:layout_toRightOf="@id/fri"
+        android:text="SAT" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/digital7"
+        android:textColor="#0099FF"
+        android:layout_below="@id/H"
+        android:id="@+id/sun"
+        android:textSize="17dp"
+
+        android:layout_toRightOf="@id/sat"
+        android:text="SUN"
+        />
+
+    <Button
+        android:id="@+id/hour_show_and_expression"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:text="show clock"
+        />
+    <RadioGroup
+        android:id="@+id/format_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hour_show_and_expression"
+        android:layout_marginLeft="142dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/twelve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="12"
+            android:textColor="#FFF" />
+
+        <RadioButton
+            android:id="@+id/twenty_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="24"
+            android:textColor="#FFF" />
+
+    </RadioGroup>
+
+
+
+
+</RelativeLayout>
+
